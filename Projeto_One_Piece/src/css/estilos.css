@@ -8,6 +8,17 @@
 
 body{
     background-color: #000000;
+    overflow: hidden; /*Tudo que estiver transbordando ele esconde*/
+}
+
+main::after{
+    content: "";
+    position: fixed; /*posição fixa em relação as medidas abaixo*/
+    top: 0;
+    left: 0;
+    min-height: 100vh; /*100% da altura da tela*/
+    width: 80vw; /*80% da largura da tela*/
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
 }
 
 .personagem{
@@ -35,6 +46,7 @@ body{
     max-width: 380px;
     flex-direction: column;
     justify-content: center;/*Alinhar o conteudo na vertical*/
+    z-index: 1; /*Eixo de profundidade, assim determina que esse conteudo fica por cima dos demais*/
 }
 
 .conteudo .nome-personagem{
@@ -54,5 +66,39 @@ body{
 
 .conteudo .logo{
     background-image: url(../imagens/one-piece-logo.png);
+    background-size: cover; /*Cobrir toda a área disponivel do background*/
+    height: 100px;
+    width: 250px;
+    margin-bottom: 35px;
+}
+
+.botoes{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px; 
+    justify-content: center;
+    align-items: center;/*Alinhamento horizontal*/
+    gap: 10px; /*Espaçamento para usar quando se usa o display flex*/
     
+}
+
+.botoes .botao{
+    border: none;/*retirar borda*/
+    background: none;
+    cursor: pointer;/*Definir como o cursor vai ser aprensentado, nesse caso uma mão*/
+    border-radius: 50%;
+}
+
+.botoes .botao img{
+    border-radius: 50%;
+}
+
+.botoes .botao.selecionado{
+    transform: scale(1.2);/*fazer com que o botão selecionado fique maior*/
+    box-shadow: 0 0 10px #D9D9D9;
 }

@@ -27,12 +27,12 @@ botoes.forEach((botao, indice) => { /*ForEach, percorre a lista e pega cada elem
 
 
 function desselecionarPersonagem() {
-    const personagemSelecionado = document.querySelector('.personagem.selecionado');
-    personagemSelecionado.classList.remove('selecioando');
+    const PersonagemSelecionado = document.querySelector('.personagem.selecionado');
+    PersonagemSelecionado.classList.remove('selecionado');
 }
 
 function desselecionarBotao() {
-    const botaoSelecionado = document.querySelector('.botao.selecionado'); /*Busca o elemento no HTML que possui a class em questão*/
-    botaoSelecionado.classList.remove('selecionado');
+    const BotaoSelecionado = document.querySelector('.botao.selecionado'); /*Busca o elemento no HTML que possui a class em questão*/
+    BotaoSelecionado.classList.remove('selecionado');
 }
 

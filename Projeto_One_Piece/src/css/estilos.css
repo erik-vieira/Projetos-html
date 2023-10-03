@@ -89,7 +89,7 @@ main::after{
 
 .botoes .botao{
     border: none;/*retirar borda*/
-    background: none;
+    background: #000000;
     cursor: pointer;/*Definir como o cursor vai ser aprensentado, nesse caso uma mão*/
     border-radius: 50%;
 }
